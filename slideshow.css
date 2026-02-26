@@ -46,19 +46,19 @@ body{
 
 
 .slide .item:nth-child(3){
-    left: 50%;
+    left: 80%;
 }
 .slide .item:nth-child(4){
     /* shift by one item width + small gap (~22%) */
-    left: calc(50% + 22%);
+    left: calc(80% + 22%);
 }
 .slide .item:nth-child(5){
-    left: calc(50% + 44%);
+    left: calc(80% + 44%);
 }
 
 /* here n = 0, 1, 2, 3,... */
 .slide .item:nth-child(n + 6){
-    left: calc(50% + 66%);
+    left: calc(80% + 66%);
     opacity: 100%;
     
 
