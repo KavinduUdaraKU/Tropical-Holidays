@@ -164,7 +164,11 @@ body{
     }
 
     /* hide extra cards offscreen to avoid clutter */
-    .slide .item:nth-child(n + 3) {
+    .slide .item:nth-child(1),
+    .slide .item:nth-child(3),
+    .slide .item:nth-child(4),
+    .slide .item:nth-child(5),
+    .slide .item:nth-child(n + 6) {
         left: 600px;
     }
 
