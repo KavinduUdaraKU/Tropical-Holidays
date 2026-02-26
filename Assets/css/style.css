@@ -9935,6 +9935,11 @@ Header Customization
   .blog-style7 {
     flex-wrap: wrap;
   }
+
+  .vs-btn.blog-style2 {
+    margin-top: 15px;
+    padding-bottom: 10%;
+  }
 }
 .blog-style7 .blog-img {
   min-width: 388px;
