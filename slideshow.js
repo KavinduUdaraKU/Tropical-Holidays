@@ -11,6 +11,6 @@ prev.addEventListener('click', function(){
     document.querySelector('.slide').prepend(items[items.length - 1]) // here the length of items = 6
 })
 
-// document.querySelector('div').addEventListener('contextmenu', function(e){
-//     e.preventDefault();
-// })
+ document.querySelector('div').addEventListener('contextmenu', function(e){
+     e.preventDefault();
+ })
