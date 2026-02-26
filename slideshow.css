@@ -165,11 +165,15 @@ body{
 
     /* hide extra cards offscreen to avoid clutter */
     .slide .item:nth-child(n + 3) {
-        display: none;
+        left: 600px;
     }
 
     .button {
         bottom: 10px;
+    }
+
+    .item{
+        animation: ease-in-out 0.5s 1 forwards;
     }
 
     .content {
