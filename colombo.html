@@ -3,6 +3,7 @@
 
 
 <!-- Mirrored from html.vecurosoft.com/travolo/demo/tour-booking.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Jan 2026 17:00:37 GMT -->
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -27,7 +28,8 @@
 	============================== -->
   <link rel="preconnect" href="https://fonts.googleapis.com/" />
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
 
   <!--==============================
 	    All CSS File
@@ -55,7 +57,7 @@
   <!--==============================
     Mobile Menu
   ============================== -->
-    <div class="vs-menu-wrapper">
+  <div class="vs-menu-wrapper">
     <div class="vs-menu-area text-center">
       <button class="vs-menu-toggle"><i class="fal fa-times"></i></button>
       <div class="mobile-logo">
@@ -328,7 +330,7 @@
                       <a href="itineraries.html">Itineraries</a>
                       <ul class="sub-menu">
                         <li>
-                          
+
                         </li>
                       </ul>
                     </li>
@@ -424,7 +426,8 @@
       <div class="filter-menu1 filter-menu-active wow fadeInUp wow-animated">
         <button class="tab-button active" data-filter=".tab-content1"><i class="fas fa-info-circle"></i>
           Information</button>
-        <button class="tab-button" data-filter=".tab-content2"><i class="fas fa-calendar"></i> Places You will Visit</button>
+        <button class="tab-button" data-filter=".tab-content2"><i class="fas fa-calendar"></i> Places You will
+          Visit</button>
         <button class="tab-button" data-filter=".tab-content3"><i class="fas fa-map-marker-alt"></i>
           Location</button>
         <button class="tab-button" data-filter=".tab-content4"><i class="fas fa-camera-retro"></i> Gallery</button>
@@ -457,18 +460,26 @@
                       <p class="tour-price"><strong></strong></p>
                     </div>
                   </div>
-                  <p>Colombo is the vibrant commercial heart of Sri Lanka, where history and modern life blend seamlessly.
-                    Once shaped by the influence of the Portuguese, Dutch, and British, the city grew into a strategic port along
-                    the historic East–West maritime trade routes. Today, traces of this rich colonial past remain visible in its charming
-                    architecture, from stately old buildings and historic churches to beautifully preserved landmarks standing beside
+                  <p>Colombo is the vibrant commercial heart of Sri Lanka, where history and modern life blend
+                    seamlessly.
+                    Once shaped by the influence of the Portuguese, Dutch, and British, the city grew into a strategic
+                    port along
+                    the historic East–West maritime trade routes. Today, traces of this rich colonial past remain
+                    visible in its charming
+                    architecture, from stately old buildings and historic churches to beautifully preserved landmarks
+                    standing beside
                     contemporary skyscrapers and luxury shopping complexes.
 
-                    Beyond its heritage, Colombo offers a dynamic and cosmopolitan lifestyle. The city is home to elegant theatres, modern
-                    cinemas, diverse restaurants, trendy cafes, museums, art galleries, and lively nightlife spots. Its scenic oceanfront,
+                    Beyond its heritage, Colombo offers a dynamic and cosmopolitan lifestyle. The city is home to
+                    elegant theatres, modern
+                    cinemas, diverse restaurants, trendy cafes, museums, art galleries, and lively nightlife spots. Its
+                    scenic oceanfront,
                     bustling markets, and leafy streets add even more character to this ever-evolving metropolis.
 
-                    Rapidly developing yet deeply rooted in tradition, Colombo provides the perfect introduction or farewell to your Sri Lankan
-                    journey. A Colombo city tour promises a captivating mix of culture, history, shopping, dining, and coastal charm making it a
+                    Rapidly developing yet deeply rooted in tradition, Colombo provides the perfect introduction or
+                    farewell to your Sri Lankan
+                    journey. A Colombo city tour promises a captivating mix of culture, history, shopping, dining, and
+                    coastal charm making it a
                     must-visit destination on your travel itinerary.</p>
                   <table class="infolist">
                     <tr>
@@ -578,10 +589,10 @@
                       <li>Personal Guide</li>
                     </ul>
                   </div> -->
-                
-                
-                
-                  
+
+
+
+
                 </div>
                 <div class="filter-item tab-content3">
                   <h2 class="tab-title">Tour Location</h2>
@@ -927,60 +938,69 @@
                   <h3 class="widget_title">Plan Your Trip</h3>
                   <p class="widget_text">Donec rutrum congue leo elit In a eget malesuadga blandit.</p>
                   <form class="booking-form">
-                    <div class="form-group ">
-                      <i class="fas fa-search"></i>
-                      <input type="text" placeholder="Search Tour" />
-                    </div>
-                    <div class="form-group ">
-                      <i class="fas fa-compass"></i>
-                      <input type="text" placeholder="Where To?" />
+                    <div style="position:relative; width:300px;">
+
+                      <input type="text" id="searchInput" placeholder="Search pages..." onkeyup="showSuggestions()"
+                        style="width: 250px; padding:12px; border-radius:25px; border:1px solid #ff7b00; outline:none; font-size:18px; color: #ff7b00;">
+
+                      <ul id="suggestions"
+                        style="list-style:none; padding:0; margin:5px 0 0 0; background:hsl(0, 0%, 100%); border-radius:10px; box-shadow:0 5px 15px rgba(255, 52, 52, 0.1); position:absolute; width:100%; max-height:200px; overflow-y:auto;color: rgb(0, 0, 0);">
+                      </ul>
+
                     </div>
 
-                    <div class="form-group">
-                      <i class="fas fa-calendar-alt"></i>
-                      <select class="form-select" name="name">
-                        <option value="" selected="selected" disabled="disabled" hidden="">Select Month</option>
-                        <option value="">January</option>
-                        <option value="">February</option>
-                        <option value="">March</option>
-                        <option value="">April</option>
-                      </select>
-                    </div>
+                    <script>
+                      const pages = [
+                        { name: "Colombo City Tour", url: "colombo.html" },
+                        { name: "Kandy Cultural Tour", url: "kandy.html" },
+                        { name: "Galle Heritage Day Tour", url: "galle.html" },
+                        { name: "Nuwara Eliya Day Tour", url: "nuwaraeliya.html" },
+                        { name: "Sigiriya & Dambulla Day Tour", url: "sigiriya.html" },
+                        { name: "Mirissa Whale Watching", url: "mirissa.html" },
+                        { name: "Belihuloya Day Tour", url: "belihuloya.html" },
+                        { name: "Anuradhapura Day Tour", url: "anuradhapura.html" },
+                        { name: "Polonnaruwa Day Tour", url: "polonnaruwa.html" },
+                        { name: "Sinharaja Rainforest Day Tour", url: "sinharaja.html" },
+                        { name: "Udawalawe National Park Day Tour", url: "udawalawe.html" },
+                        { name: "Yala National Park Day Tour", url: "yala.html" },
+                        { name: "Willpattu National Park Day Tour", url: "willpattu.html" },
+                        { name: "Kitulgala White Water Rafting", url: "kitulgala.html" }
+                      ];
+                      function showSuggestions() {
+                        const input = document.getElementById("searchInput").value.toLowerCase();
+                        const suggestionBox = document.getElementById("suggestions");
+                        suggestionBox.innerHTML = "";
 
-                    <div class="form-group">
-                      <i class="fas fa-thumbtack"></i>
-                      <select class="form-select" name="name">
-                        <option value="" selected="selected" disabled="disabled" hidden="">Select Type</option>
-                        <option value="">Adventure </option>
-                        <option value="">Combining</option>
-                        <option value="">Sporting</option>
-                        <option value="">Domestic</option>
-                      </select>
-                    </div>
+                        if (input === "") return;
 
-                    <div class="price_slider_wrapper">
-                      <h3 class="widget_title">Filter By Price</h3>
-                      <div class="price_slider"></div>
-                      <div class="price_label">
-                        Price: <span class="from">$10</span> — <span class="to">$75</span>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <div class="chekbox-area">
-                        <input type="radio" id="popular" name="fav_language" value="popular" checked />
-                        <label for="popular">Popular</label>
-                      </div>
-                      <div class="chekbox-area">
-                        <input type="radio" id="trendy" name="fav_language" value="trendy" />
-                        <label for="trendy">Trendy</label>
-                      </div>
-                      <div class="chekbox-area">
-                        <input type="radio" id="latest" name="fav_language" value="latest" />
-                        <label for="latest">Latest</label>
-                      </div>
-                    </div>
-                    <button class="vs-btn style4 w-100">Search</button>
-                  </form>
+                        const filtered = pages.filter(page =>
+                          page.name.toLowerCase().includes(input)
+                        );
+
+                        filtered.forEach(page => {
+                          const li = document.createElement("li");
+                          li.textContent = page.name;
+
+                          li.style.padding = "10px";
+                          li.style.cursor = "pointer";
+                          li.style.transition = "0.2s";
+
+                          li.onmouseover = function () {
+                            this.style.background = "#007bff";
+                            this.style.color = "white";
+                          };
+
+                          li.onmouseout = function () {
+                            this.style.background = "white";
+                            this.style.color = "black";
+                          };
+
+                          li.onclick = () => window.location.href = page.url;
+
+                          suggestionBox.appendChild(li);
+                        });
+                      }
+                    </script>
                 </div>
               </div>
             </div>
@@ -1152,4 +1172,5 @@
 
 
 <!-- Mirrored from html.vecurosoft.com/travolo/demo/tour-booking.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Jan 2026 17:00:46 GMT -->
+
 </html>
