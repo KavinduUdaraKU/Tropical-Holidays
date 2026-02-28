@@ -11452,6 +11452,10 @@ Header Customization
   height: 800px;
 }
 
+#stu2{
+  padding-top: 65px;
+}
+
 @media (max-width: 767px) {
   .blog-style7 .blog-img {
     min-width: 100%;
@@ -11460,7 +11464,13 @@ Header Customization
   #my-stu{
     height: 1100px;
   }
+
+  #stu2{
+    padding-top: 0px;
+  }
 }
+
+
 
 .blog-style7 .blog-top {
   margin-bottom: 5px;
