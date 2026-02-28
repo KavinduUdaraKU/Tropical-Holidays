@@ -21,17 +21,24 @@
 //         "Number of Children: " + children;
 //     window.open(url, "_blank"); focus();
 // }
+
 function sendToWhatsapp() {
     let number = "94774070817";
 
-    let fname = document.getElementById("fname").value;
-    let lname = document.getElementById("lname").value;
-    let townCity = document.getElementById("town-city").value;
-    let country = document.getElementById("country").value;
-    let email = document.getElementById("email").value;
-    let phone = document.getElementById("phone").value;
-    let adults = document.getElementById("adults").value;
+    let fname = document.getElementById("fname").value.trim();
+    let lname = document.getElementById("lname").value.trim();
+    let townCity = document.getElementById("town-city").value.trim();
+    let country = document.getElementById("country").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let phone = document.getElementById("phone").value.trim();
+    let adults = document.getElementById("adults").value.trim();
     let children = document.getElementById("children").value;
+    let notes = document.getElementById("notes").value;
+
+    if(!fname || !lname || !townCity || !country || !email || !phone || !adults ){
+        alert("Please fill all required fields!");
+        return false;
+    }
 
     // Unicode encoded emojis
     let palmTree = "\uD83C\uDF34"; 
@@ -50,7 +57,8 @@ function sendToWhatsapp() {
         "📧 *Email:* " + email + "\n" +
         "📱 *Contact Number:* " + phone + "\n\n" +
         crown + " *Number of Adults:* " + adults + "\n" +
-        child + " *Number of Children:* " + children + "\n\n" +
+        (children ? child + " *Number of Children:* " + children + "\n\n" : "") +
+        (notes ? "📝 *Special Requests / Notes:* " + notes + "\n\n" : "") +
         "Kindly share your luxury resorts, private transfers, curated excursions, and tailor-made itineraries.\n\n" +
         "We look forward to an unforgettable tropical journey with Tropical Holidays. " + sunset + sparkle;
 
