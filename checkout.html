@@ -482,10 +482,18 @@
             </div>
             <div class="col-12 form-group">
               <textarea cols="20" rows="5" class="form-control"
-                placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
+                placeholder="Notes about your order, e.g. special notes for delivery." id="notes"></textarea>
             </div>
           </div>
         </div>
+        
+            <button type="submit" class="vs-btn style4" onclick="sendToWhatsapp()">Place order</button>
+        <div class="mt-lg-3">
+        <div class="woocommerce-checkout-payment">
+          <div class="form-row place-order pt-lg-2">
+          </div>
+        </div>
+      </div>
       </form>
       <h4 class="mt-4 pt-lg-2">Your Order</h4>
       <form action="#" class="woocommerce-cart-form">
@@ -500,24 +508,18 @@
             <tbody>
               <tr class="cart_item">
                 <td data-title="Product">
-                  <a class="cart-productimage" href="shop-details.html"><img width="91" height="91"
+                  <a class="cart-productimage" href="colombo.html"><img width="91" height="91"
                       src="Assets/img/products/pd-thumb-1.png" alt="Image"></a>
                 </td>
                 <td data-title="Name">
-                  <a class="cart-productname" href="shop-details.html">Fujifilm Instax Mini Camera...</a>
+                  <a class="cart-productname" href="colombo.html">Fujifilm Instax Mini Camera...</a>
                 </td>
             </tbody>
            
           </table>
         </div>
       </form>
-      <div class="mt-lg-3">
-        <div class="woocommerce-checkout-payment">
-          <div class="form-row place-order pt-lg-2">
-            <button type="submit" class="vs-btn style4" onclick="sendToWhatsapp()" >Place order</button>
-          </div>
-        </div>
-      </div>
+      
     </div>
   </section>
   <!--==============================
