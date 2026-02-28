@@ -3,6 +3,7 @@
 
 
 <!-- Mirrored from html.vecurosoft.com/travolo/demo/checkout.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Jan 2026 17:01:00 GMT -->
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -25,7 +26,8 @@
 	============================== -->
   <link rel="preconnect" href="https://fonts.googleapis.com/" />
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
 
   <!--==============================
 	    All CSS File
@@ -432,63 +434,73 @@
   <!--==============================
 	  Checkout Area Start
 	==============================-->
-  <section class="vs-checkout-wrapper space">
-    <div class="container">
-  
-      <form action="#" class="woocommerce-checkout">
-        <div class="row ">
-          <div class="col-lg-6">
-            <h2 class="h4">Billing Details</h2>
-            <div class="row">
-              <div class="col-12 form-group">
-                
-              </div>
-              <div class="col-md-6 form-group">
-                <input type="text" class="form-control" placeholder="First Name" id="fname">
-              </div>
-              <div class="col-md-6 form-group">
-                <input type="text" class="form-control" placeholder="Last Name" id="lname">
-              </div>
-              <div class="col-12 form-group">
-                <input type="text" class="form-control" placeholder="Town / City" id="town-city">
-              </div>
-              <div class="col-6 form-group">
-                <input type="number" class="form-control" placeholder="Number Of Adults" id="adults">
-              </div>
-              <div class="col-6 form-group">
-                <input type="number" class="form-control" placeholder="Number Of Children" id="children">
-              </div>
-              <div class="col-md-12 form-group">
-                <input type="text" class="form-control" placeholder="Country" id="country">
-              </div>
-              <div class="col-12 form-group">
-                <input type="text" class="form-control" placeholder="Email Address" id="email">
-                <input type="text" class="form-control" placeholder="Phone number" id="phone">
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <p id="ship-to-different-address">
-              <br>
-              </label>
-            </p>
-            <div class="shipping_address">
-            </div>
-            <div class="col-12 form-group">
-              <textarea cols="20" rows="5" class="form-control"
-                placeholder="Notes about your order, e.g. special notes for delivery." id="notes"></textarea>
-            </div>
-          </div>
-        </div>
-        
-            <button type="submit" class="vs-btn style4" onclick="sendToWhatsapp()">Place order</button>
-        <div class="mt-lg-3">
-        <div class="woocommerce-checkout-payment">
-          <div class="form-row place-order pt-lg-2">
-          </div>
-        </div>
+  <section class="vs-checkout-wrapper space space-bottom">
+    <div class="container outer-wrap">
+      <div>
+        <h3>Send Inquary</h3>
       </div>
-      </form>
+      <div class="filter-menu1 filter-menu-active wow fadeInUp wow-animated">
+        <button class="tab-button active" data-filter=".tab-content1"><i class="fas fa-info-circle"></i>
+          Information</button>
+        <button class="tab-button" data-filter=".tab-content2"><i class="fas fa-calendar"></i> Places You will
+          Visit</button>
+      </div>
+      <div class="filter-active">
+        <form action="#" class="woocommerce-checkout filter-item tab-content1">
+          <div class="row ">
+            <div class="col-lg-6">
+              <h2 class="h4">Billing Details</h2>
+              <div class="row">
+                <div class="col-12 form-group">
+
+                </div>
+                <div class="col-md-6 form-group">
+                  <input type="text" class="form-control" placeholder="First Name" id="fname">
+                </div>
+                <div class="col-md-6 form-group">
+                  <input type="text" class="form-control" placeholder="Last Name" id="lname">
+                </div>
+                <div class="col-12 form-group">
+                  <input type="text" class="form-control" placeholder="Town / City" id="town-city">
+                </div>
+                <div class="col-6 form-group">
+                  <input type="number" class="form-control" placeholder="Number Of Adults" id="adults">
+                </div>
+                <div class="col-6 form-group">
+                  <input type="number" class="form-control" placeholder="Number Of Children" id="children">
+                </div>
+                <div class="col-md-12 form-group">
+                  <input type="text" class="form-control" placeholder="Country" id="country">
+                </div>
+                <div class="col-12 form-group">
+                  <input type="text" class="form-control" placeholder="Email Address" id="email">
+                  <input type="text" class="form-control" placeholder="Phone number" id="phone">
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <p id="ship-to-different-address">
+                <br>
+                </label>
+              </p>
+              <div class="shipping_address">
+              </div>
+              <div class="col-12 form-group">
+                <textarea cols="20" rows="5" class="form-control"
+                  placeholder="Notes about your order, e.g. special notes for delivery." id="notes"></textarea>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="vs-btn style4" onclick="sendToWhatsapp()">Place order</button>
+          <div class="mt-lg-3">
+            <div class="woocommerce-checkout-payment">
+              <div class="form-row place-order pt-lg-2">
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
       <h4 class="mt-4 pt-lg-2">Your Order</h4>
       <form action="#" class="woocommerce-cart-form">
         <div class="table-responsive">
@@ -509,12 +521,14 @@
                   <a class="cart-productname" href="colombo.html">Fujifilm Instax Mini Camera...</a>
                 </td>
             </tbody>
-           
+
           </table>
         </div>
+
       </form>
-      
+
     </div>
+
   </section>
   <!--==============================
 	  Checkout Area End
@@ -683,4 +697,5 @@
 
 
 <!-- Mirrored from html.vecurosoft.com/travolo/demo/checkout.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Jan 2026 17:01:00 GMT -->
+
 </html>
