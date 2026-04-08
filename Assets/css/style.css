@@ -7044,12 +7044,78 @@ Header Customization
   transform: scale(1.1);
 }
 
+
 .destination-style1:hover .destination-price {
   background-color: var(--theme-color);
   color: var(--white-color);
 }
 
 .destination-style1:hover .destination-info {
+  background-color: var(--theme-color);
+}
+
+.destination-style8 {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.destination-style8 img {
+  transition: 0.5s ease-in-out;
+}
+
+.destination-style8 .destination-price {
+  font-size: 30px;
+  font-weight: 700;
+  padding: 15px 30px 15px;
+  border-radius: 0 0 10px 10px;
+  background-color: var(--white-color);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.5s ease-in-out;
+}
+
+.destination-style8 .destination-info {
+  transition: 0.5s ease-in-out;
+  background-color: rgba(28, 28, 28, 0.8);
+  padding: 25px 30px 10px;
+  max-width: 297px;
+  width: 100%;
+  border-radius: 0 10px 10px 0px;
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+}
+
+.destination-style8 .destination-name {
+  margin-bottom: 5px;
+}
+
+.destination-style8 .destination-name a {
+  color: var(--white-color);
+}
+
+.destination-style8 .destination-text {
+  color: var(--white-color);
+}
+
+/* .destination-style8:hover img {
+  transform: scale(1.1);
+} */
+
+.destination-style8:hover img {
+  transform: rotate(7deg) scale(1.15);
+}
+
+.destination-style8:hover .destination-price {
+  background-color: var(--theme-color);
+  color: var(--white-color);
+}
+
+.destination-style8:hover .destination-info {
   background-color: var(--theme-color);
 }
 
@@ -7120,6 +7186,16 @@ Header Customization
     font-size: 24px;
   }
 
+  .destination-style8 .destination-info {
+    max-width: 250px;
+    padding: 20px 20px 5px;
+  }
+
+  .destination-style8 .destination-price {
+    padding: 10px 24px;
+    font-size: 24px;
+  }
+
   .destination-list li {
     padding-left: 200px;
   }
@@ -7133,6 +7209,16 @@ Header Customization
   }
 
   .destination-style1 .destination-price {
+    padding: 10px 24px;
+    font-size: 24px;
+  }
+
+  .destination-style8 .destination-info {
+    max-width: 220px;
+    padding: 15px 15px 0px;
+  }
+
+  .destination-style8 .destination-price {
     padding: 10px 24px;
     font-size: 24px;
   }
