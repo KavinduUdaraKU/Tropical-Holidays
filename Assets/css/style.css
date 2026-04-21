@@ -7055,10 +7055,13 @@ Header Customization
 }
 
 .destination-style8 {
+  height: 600px;
   position: relative;
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 30px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+  transition: 0.5s ease-in-out;
 }
 
 .destination-style8 img {
@@ -7067,10 +7070,10 @@ Header Customization
 
 .destination-style8 .destination-price {
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 500;
   padding: 15px 30px 15px;
   border-radius: 0 0 10px 10px;
-  background-color: var(--white-color);
+  background-color: rgb(255, 255, 255);
   position: absolute;
   top: 0;
   left: 50%;
@@ -7079,45 +7082,68 @@ Header Customization
 }
 
 .destination-style8 .destination-info {
+  font-size: 30px;
   transition: 0.5s ease-in-out;
-  background-color: rgba(28, 28, 28, 0.8);
-  padding: 25px 30px 10px;
-  max-width: 297px;
+  background-color: rgb(255, 255, 255);
+  padding-left: 20px;
+  padding-right: 20px;
   width: 100%;
-  border-radius: 0 10px 10px 0px;
   position: absolute;
   left: 0;
-  bottom: 30px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+  height: 200px;
+  bottom: 0;
+  text-align: center;
 }
 
 .destination-style8 .destination-name {
   margin-bottom: 5px;
 }
 
+.quintessential-regular {
+  font-family: "Quintessential", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 .destination-style8 .destination-name a {
-  color: var(--white-color);
+  font-family: "Quintessential", serif;
+  color: var(--title-color);
+  font-size: 30px;
+  transition: ease-in-out 0.3s;
+  padding-top: 5px;
+}
+
+.destination-style8 .destination-name a:hover {
+  color: var(--theme-color);
 }
 
 .destination-style8 .destination-text {
-  color: var(--white-color);
+  font-family: "Oldenburg", serif;
+  color: rgb(65, 65, 65);
+  font-size: 17px;
 }
 
 /* .destination-style8:hover img {
   transform: scale(1.1);
 } */
-
-.destination-style8:hover img {
-  transform: rotate(7deg) scale(1.15);
+.destination-style8:hover{
+  transform: scale(1.04);
 }
+/* .destination-style8:hover img {
+  transform: rotate(7deg) scale(1.15);
+} */
 
 .destination-style8:hover .destination-price {
   background-color: var(--theme-color);
   color: var(--white-color);
 }
 
-.destination-style8:hover .destination-info {
+/* .destination-style8:hover .destination-info {
   background-color: var(--theme-color);
-}
+} */
 
 .destination-details .ds-title:first-child {
   margin-bottom: 33px;
@@ -7187,8 +7213,8 @@ Header Customization
   }
 
   .destination-style8 .destination-info {
-    max-width: 250px;
-    padding: 20px 20px 5px;
+    width: 100%;
+    height: 250px;
   }
 
   .destination-style8 .destination-price {
@@ -7214,8 +7240,13 @@ Header Customization
   }
 
   .destination-style8 .destination-info {
-    max-width: 220px;
+    height: 200px;
     padding: 15px 15px 0px;
+  }
+
+  .destination-style8{
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   .destination-style8 .destination-price {
