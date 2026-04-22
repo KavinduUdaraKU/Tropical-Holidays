@@ -615,17 +615,78 @@
           </div>
         </div>
         <div class="col-lg-4">
-          <div class="sidebar-area">
-            <div class="widget widget_search">
-              <div class="widget_title">Search</div>
-              <form class="search-form">
-                <input type="text" placeholder="Search Tour">
-                <button type="submit"><i class="far fa-search"></i></button>
-              </form>
-            </div>
-            
+          <div class="sidebar-area tours-sidebar">
+            <div class="widget">
+              <h3 class="widget_title">Plan Your Trip</h3>
+              <p class="widget_text">Donec rutrum congue leo elit In a eget malesuadga blandit.</p>
+              <form class="booking-form">
+                <div style="position:relative; width:300px;">
 
-            <div class="widget widget-social">
+                  <input type="text" id="searchInput" placeholder="Search pages..." onkeyup="showSuggestions()"
+                    style="overflow: hidden; padding:12px; border-radius:25px; border:1px solid #ff7b00; outline:none; font-size:18px; color: #ff7b00;">
+
+                  <ul id="suggestions"
+                    style="z-index: 1000;overflow:hidden; padding:0; margin:5px 0 0 0; background:hsl(0, 0%, 100%); border-radius:10px; box-shadow:0 5px 15px rgba(255, 52, 52, 0.1); position:absolute; width:100%; max-height:200px; overflow-y:auto;color: rgb(0, 0, 0);">
+                  </ul>
+
+                </div>
+
+                <script>
+                  const pages = [
+                    { name: "Colombo City Tour", url: "colombo.html" },
+                    { name: "Kandy Cultural Tour", url: "kandy.html" },
+                    { name: "Galle Heritage Day Tour", url: "galle.html" },
+                    { name: "Nuwara Eliya Day Tour", url: "nuwaraeliya.html" },
+                    { name: "Sigiriya & Dambulla Day Tour", url: "sigiriya.html" },
+                    { name: "Mirissa Whale Watching", url: "mirissa.html" },
+                    { name: "Belihuloya Day Tour", url: "belihuloya.html" },
+                    { name: "Anuradhapura Day Tour", url: "anuradhapura.html" },
+                    { name: "Polonnaruwa Day Tour", url: "polonnaruwa.html" },
+                    { name: "Sinharaja Rainforest Day Tour", url: "sinharaja.html" },
+                    { name: "Udawalawe National Park Day Tour", url: "udawalawe.html" },
+                    { name: "Yala National Park Day Tour", url: "yala.html" },
+                    { name: "Willpattu National Park Day Tour", url: "willpattu.html" },
+                    { name: "Kitulgala White Water Rafting", url: "kitulgala.html" }
+                  ];
+                  function showSuggestions() {
+                    const input = document.getElementById("searchInput").value.toLowerCase();
+                    const suggestionBox = document.getElementById("suggestions");
+                    suggestionBox.innerHTML = "";
+
+                    if (input === "") return;
+
+                    const filtered = pages.filter(page =>
+                      page.name.toLowerCase().includes(input)
+                    );
+
+                    filtered.forEach(page => {
+                      const li = document.createElement("li");
+                      li.textContent = page.name;
+
+                      li.style.padding = "10px";
+                      li.style.cursor = "pointer";
+                      li.style.transition = "0.2s";
+
+                      li.onmouseover = function () {
+                        this.style.background = "#007bff";
+                        this.style.color = "white";
+                      };
+
+                      li.onmouseout = function () {
+                        this.style.background = "white";
+                        this.style.color = "black";
+                      };
+
+                      li.onclick = () => window.location.href = page.url;
+
+                      suggestionBox.appendChild(li);
+                    });
+                  }
+                </script>
+              </form>
+
+            </div>
+            <div class="widget widget-social" style="overflow: visible;" z-index: -200;">
               <h3 class="widget_title">Never Miss News</h3>
               <div class="social-style widget_social_style">
                 <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -635,8 +696,141 @@
               </div>
             </div>
           </div>
+          <!-- <div class="col-lg-4">
+          <div class="sidebar-area">
+            <div class="widget widget_search">
+              <div class="widget_title">Search</div>
+              <form class="booking-form">
+                    <div style="position:relative; width:300px;">
+
+                      <input type="text" id="searchInput" placeholder="Search pages..." onkeyup="showSuggestions()"
+                        style="width: 250px; padding:12px; border-radius:25px; border:1px solid #ff7b00; outline:none; font-size:18px; color: #ff7b00;">
+
+                      <ul id="suggestions"
+                        style="list-style:none; padding:0; margin:5px 0 0 0; background:hsl(0, 0%, 100%); border-radius:10px; box-shadow:0 5px 15px rgba(255, 52, 52, 0.1); position:absolute; width:100%; max-height:200px; overflow-y:auto;color: rgb(0, 0, 0);">
+                      </ul>
+
+                    </div>
+
+                    <script>
+                      const pages = [
+                        { name: "Colombo City Tour", url: "colombo.html" },
+                        { name: "Kandy Cultural Tour", url: "kandy.html" },
+                        { name: "Galle Heritage Day Tour", url: "galle.html" },
+                        { name: "Nuwara Eliya Day Tour", url: "nuwaraeliya.html" },
+                        { name: "Sigiriya & Dambulla Day Tour", url: "sigiriya.html" },
+                        { name: "Mirissa Whale Watching", url: "mirissa.html" },
+                        { name: "Belihuloya Day Tour", url: "belihuloya.html" },
+                        { name: "Anuradhapura Day Tour", url: "anuradhapura.html" },
+                        { name: "Polonnaruwa Day Tour", url: "polonnaruwa.html" },
+                        { name: "Sinharaja Rainforest Day Tour", url: "sinharaja.html" },
+                        { name: "Udawalawe National Park Day Tour", url: "udawalawe.html" },
+                        { name: "Yala National Park Day Tour", url: "yala.html" },
+                        { name: "Willpattu National Park Day Tour", url: "willpattu.html" },
+                        { name: "Kitulgala White Water Rafting", url: "kitulgala.html" }
+                      ];
+                      function showSuggestions() {
+                        const input = document.getElementById("searchInput").value.toLowerCase();
+                        const suggestionBox = document.getElementById("suggestions");
+                        suggestionBox.innerHTML = "";
+
+                        if (input === "") return;
+
+                        const filtered = pages.filter(page =>
+                          page.name.toLowerCase().includes(input)
+                        );
+
+                        filtered.forEach(page => {
+                          const li = document.createElement("li");
+                          li.textContent = page.name;
+
+                          li.style.padding = "10px";
+                          li.style.cursor = "pointer";
+                          li.style.transition = "0.2s";
+
+                          li.onmouseover = function () {
+                            this.style.background = "#007bff";
+                            this.style.color = "white";
+                          };
+
+                          li.onmouseout = function () {
+                            this.style.background = "white";
+                            this.style.color = "black";
+                          };
+
+                          li.onclick = () => window.location.href = page.url;
+
+                          suggestionBox.appendChild(li);
+                        });
+                      }
+                    </script>
+                  </form>
+              <form class="search-form">
+                <input type="text" placeholder="Search Destinations" id="searchInput" onkeyup="showSuggestions()">
+                <button type="submit"><i class="far fa-search"></i></button>
+                <ul id="suggestions"
+                        style="list-style:none; padding:0; margin:5px 0 0 0; background:hsl(0, 0%, 100%); border-radius:10px; box-shadow:0 5px 15px rgba(255, 52, 52, 0.1); position:absolute; width:100%; max-height:200px; overflow-y:auto;color: rgb(0, 0, 0);">
+                      </ul>
+                <script>
+                      const pages = [
+                        { name: "Colombo City Tour", url: "colombo.html" },
+                        { name: "Kandy Cultural Tour", url: "kandy.html" },
+                        { name: "Galle Heritage Day Tour", url: "galle.html" },
+                        { name: "Nuwara Eliya Day Tour", url: "nuwaraeliya.html" },
+                        { name: "Sigiriya & Dambulla Day Tour", url: "sigiriya.html" },
+                        { name: "Mirissa Whale Watching", url: "mirissa.html" },
+                        { name: "Belihuloya Day Tour", url: "belihuloya.html" },
+                        { name: "Anuradhapura Day Tour", url: "anuradhapura.html" },
+                        { name: "Polonnaruwa Day Tour", url: "polonnaruwa.html" },
+                        { name: "Sinharaja Rainforest Day Tour", url: "sinharaja.html" },
+                        { name: "Udawalawe National Park Day Tour", url: "udawalawe.html" },
+                        { name: "Yala National Park Day Tour", url: "yala.html" },
+                        { name: "Willpattu National Park Day Tour", url: "willpattu.html" },
+                        { name: "Kitulgala White Water Rafting", url: "kitulgala.html" }
+                      ];
+                      function showSuggestions() {
+                        const input = document.getElementById("searchInput").value.toLowerCase();
+                        const suggestionBox = document.getElementById("suggestions");
+                        suggestionBox.innerHTML = "";
+
+                        if (input === "") return;
+
+                        const filtered = pages.filter(page =>
+                          page.name.toLowerCase().includes(input)
+                        );
+
+                        filtered.forEach(page => {
+                          const li = document.createElement("li");
+                          li.textContent = page.name;
+
+                          li.style.padding = "10px";
+                          li.style.cursor = "pointer";
+                          li.style.transition = "0.2s";
+
+                          li.onmouseover = function () {
+                            this.style.background = "#007bff";
+                            this.style.color = "white";
+                          };
+
+                          li.onmouseout = function () {
+                            this.style.background = "white";
+                            this.style.color = "black";
+                          };
+
+                          li.onclick = () => window.location.href = page.url;
+
+                          suggestionBox.appendChild(li);
+                        });
+                      }
+                    </script>
+              </form> -->
         </div>
+
+
+
       </div>
+    </div>
+    </div>
     </div>
   </section>
   <!--==============================
