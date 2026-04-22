@@ -7129,9 +7129,10 @@ Header Customization
 /* .destination-style8:hover img {
   transform: scale(1.1);
 } */
-.destination-style8:hover{
+.destination-style8:hover {
   transform: scale(1.04);
 }
+
 /* .destination-style8:hover img {
   transform: rotate(7deg) scale(1.15);
 } */
@@ -7146,7 +7147,9 @@ Header Customization
 } */
 
 .destination-details .ds-title:first-child {
+  font-family: "Quintessential", serif;
   margin-bottom: 33px;
+  font-size: 50px;
   margin-top: -10px;
 }
 
@@ -7244,7 +7247,7 @@ Header Customization
     padding: 15px 15px 0px;
   }
 
-  .destination-style8{
+  .destination-style8 {
     margin-left: 20px;
     margin-right: 20px;
   }
@@ -11568,12 +11571,12 @@ Header Customization
   /* Small devices */
 }
 
-#my-stu{
-  width: 100%; 
+#my-stu {
+  width: 100%;
   height: 768px;
 }
 
-#stu2{
+#stu2 {
   padding-top: 65px;
 }
 
@@ -11582,11 +11585,11 @@ Header Customization
     min-width: 100%;
   }
 
-  #my-stu{
+  #my-stu {
     height: 1100px;
   }
 
-  #stu2{
+  #stu2 {
     padding-top: 0px;
   }
 }
