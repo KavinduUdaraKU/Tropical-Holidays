@@ -59,7 +59,7 @@ function sendToWhatsapp() {
         crown + " *Number of Adults:* " + adults + "\n" +
         (children ? child + " *Number of Children:* " + children + "\n\n" : "") +
         (notes ? "📝 *Special Requests / Notes:* " + notes + "\n\n" : "") +
-        "Kindly share your luxury resorts, private transfers, curated excursions, and tailor-made itineraries.\n\n" +
+        "Kindly share your luxury resorts, private transfers, curated excursions, and tailor-made Accommodation.\n\n" +
         "We look forward to an unforgettable tropical journey with Tropical Holidays. " + sunset + sparkle;
 
     let url = "https://wa.me/" + number + "?text=" + encodeURIComponent(message);
