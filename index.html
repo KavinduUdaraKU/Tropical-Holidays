@@ -66,6 +66,17 @@
 </head>
 
 <body>
+  <div id="preloader"></div>
+  <script>
+  window.addEventListener("load", function () {
+    const loader = document.getElementById("preloader");
+
+    // Delay before hiding loader
+    setTimeout(() => {
+      loader.classList.add("hide");
+    }, 2100); // 3000ms = 3 seconds
+  });
+</script>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KF355825" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
@@ -1700,9 +1711,10 @@
   <!-- Scroll To Top -->
   <a href="#" class="scrollToTop scroll-btn"><i class="far fa-arrow-up"></i></a>
 
-  <!-- ==============================
+  <!--==============================
     All Js File
-  ================================ -->
+============================== -->
+
   <!-- Jquery -->
   <script src="Assets/js/vendor/jquery-3.6.0.min.js"></script>
   <!-- Slick Slider -->
