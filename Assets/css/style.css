@@ -95,6 +95,28 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+#preloader {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  background: #ffffff url("Assets/img/about/0515-ezgif.com-video-to-gif-converter.gif") no-repeat center center;
+  background-size: 30%;
+
+  /* Smooth fade animation */
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s ease, visibility 1s ease;
+}
+
+/* Hide preloader after page loads */
+#preloader.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
 iframe {
   border: none;
   width: 100%;
@@ -394,6 +416,10 @@ h6 {
   .row:not([class*=gx-]) {
     --bs-gutter-x: 26px;
   }
+}
+
+#preloader {
+  background-size: 30%;
 }
 
 .gy-30 {
@@ -1032,6 +1058,13 @@ textarea.is-invalid {
     padding: 0 20px;
   }
 }
+
+@media (max-width: 700px) {
+  #preloader {
+    background-size: 70%;
+  }
+}
+
 
 /*=================================
     03. Utilities
